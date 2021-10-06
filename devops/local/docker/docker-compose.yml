@@ -1,0 +1,116 @@
+version: "3.8"
+services:
+  mongo:
+    image: geppettotest/mongo-local:april2020
+    container_name: mongo-5746
+    restart: unless-stopped
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - sportsplayers_5746-volume:/data/db
+    ports:
+      - "27018:27017"
+    healthcheck:
+      test: echo 'db.runCommand({serverStatus:1}).ok' | mongo admin -u root -p root --quiet | grep 1
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+  vault:
+    image: vault
+    container_name: vault-5746
+    ports:
+      - "8400:8200"
+    environment:
+        VAULT_SERVER: "http://127.0.0.1:8200"
+        VAULT_DEV_ROOT_TOKEN_ID: vault-geppetto-2021
+    cap_add:
+      - IPC_LOCK
+
+  authproxy:
+    build: ../../../application/services/default_services/authproxy
+    image: authproxy-5746
+    container_name: authproxy-5746
+    ports:
+      - "0000:8001"
+    env_file: .env
+    depends_on:
+      - mongo
+      - camunda
+
+  securitymanager:
+    build: ../../../application/services/default_services/securitymanager
+    image: securitymanager-5746
+    container_name: securitymanager-5746
+    ports:
+      - "8003:8003"
+    env_file: .env
+    depends_on:
+      - mongo
+      - camunda
+  
+  gepfilemanager:
+    build: ../../../application/services/custom_services/gepfilemanager
+    image: gepfilemanager-5746
+    container_name: gepfilemanager-5746
+    ports:
+      - "3015:3015"
+    env_file: .env
+    depends_on:
+      - mongo
+
+  systemcredentialmanager:
+    build: ../../../application/services/default_services/systemcredentialmanager
+    image: systemcredentialmanager-5746
+    container_name: systemcredentialmanager-5746
+    ports:
+      - "8005:8005"
+    env_file: .env
+    depends_on:
+      - mongo
+      - vault
+
+  gepcustomauthorizationmanager:
+    build: ../../../application/services/default_services/gepcustomauthorizationmanager
+    image: gepcustomauthorizationmanager-5746
+    container_name: gepcustomauthorizationmanager-5746
+    ports:
+      - "8050:8050"
+    env_file: .env
+    depends_on:
+      - mongo
+      - vault
+
+
+  apigateway:
+    build: ../../../application/services/custom_services/apigateway
+    image: apigateway-5746
+    container_name: apigateway-5746
+    ports:
+      - "8000:8000"
+    env_file: .env
+    depends_on:
+      - camunda
+      - camundaservice
+      - authproxy
+      - securitymanager
+      - gepitemtagsmanager
+      - playersmanager
+
+
+
+  playersmanager: 
+    build: ../../../application/services/custom_services/playersmanager
+    image: playersmanager-5746
+    container_name: playersmanager-5746
+    ports: 
+      - 8007:8007
+    env_file: .env
+    depends_on:
+      - mongo
+
+
+volumes:
+  sportsplayers_5746-volume:
+    driver: local

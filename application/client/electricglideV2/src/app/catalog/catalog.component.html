@@ -1,0 +1,247 @@
+<form [formGroup]="Form_Values">
+    <section id="iwlt8m" class="gpd-section">
+        <div id="igo4ib" class="gpd-container gpd-cnt">
+            <input type="text" formControlName="players_name" placeholder="Find your sports players..." id="i3ozuk" class="form-control" />
+            <div id="ij0tlf" class="gdp-row gpd-grid">
+                <div id="isp0pv" class="cell gpd-clm">
+                    <div id="ivysqt" class="gdp-row gpd-grid">
+                        <div class="cell gpd-clm" id="ip9n5">
+                            <div id="ic4pam" class="gpd-text">sports players catalog</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="i2ifrf" class="cell gpd-clm">
+                    <div id="isr1s5" class="gdp-row gpd-grid">
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <select formControlName="category" class="form-select" id="dropdown_style">
+                                    <option value=""  selected>Category</option>
+                                    <option *ngFor="let item of cat_item_name; let i= index"  [value]="item">{{ item  }}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <select formControlName="Motor_types" id="dropdown_style" class="form-select">
+                                    <option value=""  selected>Motor-Types</option>
+                                    <option *ngFor="let item of Motor_type_item_name; let i= index" [value]="item">{{ item  }}</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <select formControlName="frame" id="dropdown_style" class="form-select">
+                                    <option value=""  selected>Frame</option>
+                                    <option *ngFor="let item of Frame_item_name; let i= index" [value]="item">{{ item  }}</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <select formControlName="brand" id="dropdown_style" class="form-select">
+                                    <option value=""  selected>Brand</option>
+                                    <option *ngFor="let item of Brand_item_name; let i= index" [value]="item">{{ item  }}</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <select formControlName="suspension" id="dropdown_style" class="form-select">
+                                    <option value=""  selected>Suspension</option>
+                                    <option *ngFor="let item of Suspension_item_name; let i= index" [value]="item">{{ item  }}</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <select formControlName="brakes" id="dropdown_style" class="form-select">
+                                    <option value=""  selected>Brakes</option>
+                                    <option *ngFor="let item of Brakes_item_name; let i= index" [value]="item">{{ item  }}</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="im32w7" class="gdp-row gpd-grid">
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <select formControlName="year" id="dropdown_style" class="form-select">
+                                    <option value=""  selected>Year</option>
+                                    <option *ngFor="let item of Year_item_name; let i= index" [value]="item">{{ item  }}</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <select formControlName="motor" id="dropdown_style" class="form-select">
+                                    <option value=""  selected>Motor</option>
+                                    <option *ngFor="let item of Motor_item_name; let i= index" [value]="item">{{ item  }}</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <input type="text" formControlName="players_price" class="form-control" placeholder="players Price" id="dropdown_style">
+                            </div>
+                        </div>
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <input type="text" formControlName="Motor_torque" class="form-control" placeholder="Motor Torque" id="dropdown_style">
+                            </div>
+                        </div>
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <input type="text" formControlName="Battery_capasity" class="form-control" placeholder="Battery Capasity" id="dropdown_style">
+                            </div>
+                        </div>
+                        <div id="inuuut" class="cell gpd-clm">
+                            <div id="iw8h1x" class="gdp-row gpd-grid">
+                                <input type="text" formControlName="distance" class="form-control" placeholder="Distance" id="dropdown_style">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="i3fiaf" class="cell gpd-clm"><button type="button" id="igdckj" class="btn btn-primary" (click)="search()">Search Models</button></div>
+            </div>
+        </div>
+    </section>
+    <section id="i11898" class="gpd-section">
+        <div id="is1dxh" class="gpd-container gpd-cnt">
+            <div id="in01n5" class="gdp-row gpd-grid">
+                <div id="ibaeqf" class="cell gpd-clm">
+                    <!-- <button type="button" id="ihfd1a" class="btn btn-primary">Price
+                        ascending</button> -->
+                </div>
+                <div id="irjv7s" class="cell gpd-clm">
+                    <div id="iotvfm" class="gdp-row gpd-grid">
+                        <div class="cell gpd-clm" *ngFor="let search of Search_value_array; let i = index" id="iasptw">
+                            <div class="gdp-row gpd-grid" id="itdhjg">
+                                <div class="cell gpd-clm" id="izmy3s">
+                                    <!-- <img src="https://cdn.grapedrop.com/uf9ef8595751c4d1f87c91168f5d51a8c/87ae1e767dd041e48ef4d986954431c8_group_17365.png" id="iklyys" /> -->
+                                    <img src={{search.choosen_img}} id="iklyys" />
+                                </div>
+                                <div class="cell gpd-clm" id="ill7ar">
+                                    <div class="gdp-row gpd-grid" id="i5rdgk">
+                                        <div class="cell gpd-clm" id="is4xqh">
+                                            <div class="gdp-row gpd-grid" id="iq8gtw">
+                                                <div class="cell gpd-clm" id="i6exuk">
+                                                    <div class="gpd-text" id="ikpy7k">{{search.name}}</div>
+                                                    <div class="gpd-text" id="isgjws">MSRP : ${{search.price}}</div>
+                                                </div>
+                                                <div class="cell gpd-clm" id="i6uglz">
+                                                    <div class="gdp-row gpd-grid" id="iie57n">
+                                                        <div class="cell gpd-clm" id="ioa6iy">
+                                                            <div class="gpd-text" id="iltt03">Motor :</div>
+                                                            <div class="gpd-text" id="imruag">{{search.motor}}</div>
+                                                        </div>
+                                                        <div class="cell gpd-clm" id="i149nu">
+                                                            <div class="gpd-text" id="i71d3v">Category :</div>
+                                                            <div class="gpd-text" id="imv7t9">{{search.category}}</div>
+                                                        </div>
+                                                        <div class="cell gpd-clm" id="i149nu">
+                                                            <div class="gpd-text" id="i71d3v">Frame :</div>
+                                                            <div class="gpd-text" id="imv7t9">{{search.frame}}</div>
+                                                        </div>
+                                                        <div class="cell gpd-clm" id="ig5x7v">
+                                                            <div class="gpd-text" id="inae9j">Battery :</div>
+                                                            <div class="gpd-text" id="iywcri">{{search.battery_capacity}}</div>
+                                                        </div>
+                                                        <div class="cell gpd-clm" id="iskgvq">
+                                                            <div class="gpd-text" id="i1qvsx">Suspension :</div>
+                                                            <div class="gpd-text" id="idftr1">{{search.suspension}}</div>
+                                                        </div>
+                                                        <div class="cell gpd-clm" id="is17vk">
+                                                            <div class="gpd-text" id="if85ji">Year :</div>
+                                                            <div class="gpd-text" id="i9tvyv">{{search.year}}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cell gpd-clm" id="iydr9k">
+                                            <div class="gdp-row gpd-grid" id="i4sln1"></div>
+                                        </div>
+                                        <div class="cell gpd-clm" id="im31zm">
+                                            <div class="gdp-row gpd-grid" id="ikep5a">
+                                                <div class="cell gpd-clm">
+                                                    <div class="gdp-row gpd-grid" id="i26bpl">
+                                                        <div class="cell gpd-clm" id="i0w4yd">
+                                                            <div class="gdp-row gpd-grid" id="i0awde">
+                                                                <div class="cell gpd-clm" id="i17osd">
+                                                                    <div class="gdp-row gpd-grid" id="ixgypp">
+                                                                        <div class="cell gpd-clm" id="inwezr">
+                                                                            <div class="gpd-text" id="ihhydh">Motor torque
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="cell gpd-clm" id="i4wpw1">
+                                                                            <div class="gpd-text" id="ivtuuf">{{search.motor_tark}} Nm
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cell gpd-clm" id="iertn2">
+                                                                    <div class="progress" id="iddp43">
+                                                                        <div role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="i9wpfq" class="progress-bar bg-primary">
+                                                                            25%</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell gpd-clm" id="ica02h">
+                                                            <div class="gdp-row gpd-grid" id="ii46iz">
+                                                                <div class="cell gpd-clm" id="iz2wbg">
+                                                                    <div class="gdp-row gpd-grid" id="ingwws">
+                                                                        <div class="cell gpd-clm" id="i65lb7">
+                                                                            <div class="gpd-text" id="ilf7pu">Battery capicity
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="cell gpd-clm" id="i7bfj8">
+                                                                            <div class="gpd-text" id="i56z1k">{{search.battery_capacity}} Wh
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cell gpd-clm" id="i8cem5">
+                                                                    <div class="progress" id="ih2zcz">
+                                                                        <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" id="i8flcw" class="progress-bar bg-primary">
+                                                                            65%</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell gpd-clm" id="iplyab">
+                                                            <div class="gdp-row gpd-grid" id="i0i12h">
+                                                                <div class="cell gpd-clm" id="i0wejj">
+                                                                    <div class="gdp-row gpd-grid" id="iqcgik">
+                                                                        <div class="cell gpd-clm" id="iddlgi">
+                                                                            <div class="gpd-text" id="iot2zl">Distance
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="cell gpd-clm" id="i03ymy">
+                                                                            <div class="gpd-text" id="ivish9">{{search.distance}} Km</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cell gpd-clm" id="isu54u">
+                                                                    <div class="progress" id="i7gh65">
+                                                                        <div role="progressbar" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100" id="ig285h" class="progress-bar bg-primary">
+                                                                            47%</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cell gpd-clm" id="i8fp5l">
+                                                    <button type="button" class="btn btn-primary" id="ipd5y2" (click)="seemodel(search._id)">See model</button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>

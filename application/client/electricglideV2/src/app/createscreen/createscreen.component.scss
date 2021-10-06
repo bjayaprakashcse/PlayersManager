@@ -1,0 +1,66 @@
+.card {
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
+    padding: 25px;
+    margin-bottom: 15px
+}
+
+#card1:hover {
+    background-color: #5DB18C;
+}
+
+.btn-default {
+    background-color: blue;
+}
+
+.btn-change {
+    background-color: green;
+}
+
+.img_size {
+    // width: 250px;
+    height: 250px;
+}
+
+.card_image:hover {
+    padding: auto;
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+#cancel_btn {
+    background-color: #9297A7;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 20px 10px 20px;
+}
+
+#create_btn {
+    cursor: pointer;
+    background-color: #5DB18C;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 20px 10px 20px;
+}
+
+.selected-card {
+    box-shadow: 0 8px 8px 8px rgba(0, 0, 0, .2), 0 8px 8px 0 rgba(0, 0, 0, .14), 0 8px 8px 0 rgba(0, 0, 0, .12) !important;
+    transform: translate3d(0, 0, 0);
+    transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+}

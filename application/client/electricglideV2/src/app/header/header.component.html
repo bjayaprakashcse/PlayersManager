@@ -1,0 +1,77 @@
+<nav id="iflmti" class="header1">
+    <div id="icqj" class="container">
+        <div data-columns="1" data-gjs="navbar" id="iorl" class="row no-gutters">
+            <div data-column="1" id="iu5f" class="cell">
+                <div id="ihbfo" class="burger">
+                    <div id="template-ievoj" class="burger-line-dark"></div>
+                    <div id="i937c" class="burger-line-dark"></div>
+                    <div id="ivrjf" class="burger-line-dark"></div>
+                </div>
+            </div>
+            <div data-column="1" id="imidj" class="cell">
+                <div data-gjs="navbar-items" id="i4h0k" class="menu-container">
+                    <nav data-gjs="navs" id="i011z1" class="menu">
+                        <div id="MainMenu" class="">
+                            <a class="float-start">
+                                <img id="iiarl" src="https://cdn.grapedrop.com/u5129d9550ab64e5a8a9dd4793644e5e7/714a528bf62f4d1aa0eb507da72fe9ee_sportsplayers.png" class="" />
+                            </a>
+                            <a id="izdchj" class="menu-link nav-item" *ngIf='userId!=null' [routerLink]="['/home']">
+                                Home
+
+                            </a><a id="izdchj" class="menu-link nav-item" *ngIf='isAdminUser' [routerLink]="['/admin']">
+                                Admin
+                            </a>
+                            <!-- <a id="izdchj" href='target="_self"' class="menu-link nav-item">
+                                <a style="font-size: medium;" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" id="dropdownMenuButton" data-parent="#MainMenu">
+                                    playersmanager </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="playersmanager">
+                                    <li>
+                                        <a id="ifylpi" class="dropdown-item" [routerLink]="['/inventorysearch']">inventorysearch</a>
+
+                                    </li>
+                                </ul>
+                            </a> -->
+                            <a id="izdchj" class="menu-link nav-item" *ngIf="isApplicable('createscreen')" [routerLink]="['/createscreen']">
+                                CreateScreen
+                            </a>
+                            <a id="izdchj" class="menu-link nav-item" *ngIf="isApplicable('search')" [routerLink]="['/search']">
+                                Search
+                             </a>
+                            <a id="izdchj" class="menu-link nav-item" *ngIf="isApplicable('authorization')" [routerLink]="['/authorization']">
+                                                               Authorization
+                                                            </a>
+
+                            <a id="izdchj" class="menu-link nav-item" *ngIf="isApplicable('manageroles')" [routerLink]="['/manageroles']">
+                                Manageroles
+                            </a>
+
+                            <a id="izdchj" class="menu-link nav-item" *ngIf="isApplicable('manageusers')" [routerLink]="['/manageusers']">
+                                ManageUsers
+                            </a>
+                            <a id="izdchj" class="menu-link nav-item" *ngIf='userId!=null' style="cursor: pointer;" (click)="logout()">
+                                Logout
+                            </a> <a id="izdchj" class="menu-link nav-item" *ngIf='userId==null' [routerLink]="['/login']">
+                                Login
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ibvnf" class="gpd-divider"></div>
+</nav>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'top': '100px','display': confirmLangChangeModal}">
+    <div class="modal-dialog modal-sm" role="dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>language change cause you to re-login</p>
+            </div>
+            <div class="modal-footer" style="padding: 5px">
+                <button type="button" (click)="confirmLangChange()" class="btn btn-default">Confirm</button>
+                <button type="button" (click)="onCloseHandled()" class="btn btn-default">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

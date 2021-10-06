@@ -1,0 +1,57 @@
+<section>
+    <div id="igo4ib" class="gpd-container gpd-cnt">
+        <!-- <input type="text" placeholder="Find your sports players..." id="i3ozuk" class="form-control" /> -->
+        <div id="ij0tlf" class="gdp-row gpd-grid">
+            <div id="isp0pv" class="cell gpd-clm">
+                <div id="ivysqt" class="gdp-row gpd-grid">
+                    <div class="cell gpd-clm" id="ip9n5">
+                        <div id="ic4pam" class="gpd-text">sports players Get All players Details</div>
+                    </div>
+                    <!-- <div id="i35r0r" class="cell gpd-clm"><button type="button" id="iajnjc" class="btn btn-primary">Collapse Filters</button><button type="button" id="iv0s7s" class="btn btn-primary">Reset Filters</button></div> -->
+                </div>
+            </div>
+            <div id="i3fiaf" class="cell gpd-clm"><button type="button" id="igdckj" (click)="getall()" class="btn btn-primary">Get All</button></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <!-- <div class = "panel-heading">Screen Designer</div> -->
+                <h1 class="text-center" style="color: #990066;">Get All Details</h1>
+                <div class="panel-body">
+                    <h4 class="text-center">click edit to navigate</h4>
+                </div>
+                <br>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Phone Number</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let details of players_details; let i = index">
+                            <td>{{details.name}}</td>
+                            <td>{{details.address}}</td>
+                            <td>{{details.phone_number}}</td>
+                            <td>{{details.category}}</td>
+                            <td>
+                                <button class="btn btn-success" (click)="Edit(details)"> Edit</button>
+                            </td>
+                        </tr>
+                        <!-- <tr *ngIf="players_details.length===0">
+                            <td>No results to show</td>
+                        </tr> -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</section>

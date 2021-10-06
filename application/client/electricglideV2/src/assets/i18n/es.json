@@ -1,0 +1,8 @@
+{
+    "HEADER": {
+        "GOBACK": "Regresa",
+        "HOME": "hogar",
+        "LOGOUT": "Cerrar sesión",
+        "SIGNIN": "Registrarse"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "HEADER": {
+        "GOBACK": "Go Back",
+        "HOME": "Home",
+        "LOGOUT": "Logout",
+        "SIGNIN": "SignIn"
+    }
+
+}

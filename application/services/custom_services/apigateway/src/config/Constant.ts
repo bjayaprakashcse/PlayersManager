@@ -1,0 +1,9 @@
+export const SECURITYURL = process.env.SECURITYURL;
+export const AUTHPROXYURL = process.env.AUTHPROXYURL;
+export const ADMINURL = process.env.ADMINURL;
+export const CAMUNDAURL = process.env.CAMUNDAURL;
+export const SYSTEMCREDENTIALMANAGERURL = process.env.SYSTEMCREDENTIALMANAGERURL;
+export const GEPITEMTAGSMANAGERURL = process.env.GEPITEMTAGSMANAGERURL;
+export const playersmanagerURL = process.env.playersmanagerURL;
+export const GEPFILEMANAGERURL = process.env.GEPFILEMANAGERURL;
+export const GCAMURL = process.env.GCAMURL;

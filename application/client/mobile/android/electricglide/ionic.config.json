@@ -1,0 +1,7 @@
+{
+  "name": "sportsplayers",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
